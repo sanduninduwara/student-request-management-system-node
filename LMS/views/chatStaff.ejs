@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="stylesheet" href="/Styles/chatStaff.css">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chats</title>
+</head>
+<body>
+    <!--<a href='/home'>Home</a><br>-->
+    <%let lll1 = '/dashboardStaff?username='+username %>
+    <div class="navi">
+        <a class="dashboard" href=<%=lll1%>>DashBoard</a><br>
+    </div>
+    <div class="content">
+        <h1>Requests</h1>
+        <p class="username">Username : <%=username%></p>
+        <%let k = 'chatStaff?username='+username%>
+        <div class="filter-panel">
+            <h3>Filter Options</h3>
+            <form action=<%=k%> method="POST">
+                Approval Status: <select name="status">
+                    <option value="Any">Any</option>
+                    <option value="Pending">Pending</option>
+                    <option value="Approved">Approved</option>
+                    <option value="Declined">Declined</option>
+                </select>
+                Request Type: <select name="type">
+                    <option value="Any">Any</option>
+                    <option value="Late Requests">Late Requests</option>
+                    <option value="Assignment Submission">Assignment Submission</option>
+                    <option value="Repeat Exams">Repeat Exams</option>
+                    <option value="Other">Other</option>
+                </select>
+                Student Name: <input type="text" value="Any" name="name">
+                Student Index: <input type="text" value="Any" name="index">
+                <button type="submit" value="Filter" class="sortButton">sort</button><br>
+            </form>
+        </div>
+        
+        <ol>
+            <%for(let i=chatList.length-1;i>=0;i--){%>
+                <li>
+                    <ul>
+                        <li>Student Username: <%=chatList[i].student%></li>
+                        <li>Student Fullname: <%=chatList[i].studentName%></li>
+                        <li>Student Index: <%=chatList[i].studentID%></li>
+                        <li>Request Type    :<%=chatList[i].type%></li>
+                        <li>Request Subject :<%=chatList[i].subject%></li>
+                        <li>Request Status  :<%=chatList[i].status%></li>
+                        <%let username = chatList[i].staff%>
+                        <%let id = chatList[i].id%>
+                        <%let l1 = 'chatStaff?username='+username+'&stat=approve'+'&id='+id %>
+                        <%let l2 = 'chatStaff?username='+username+'&stat=decline'+'&id='+id %>
+                        <%if(!(chatList[i].status==='Approved')){%>
+                            <a href=<%=l1%>><button type="button">Approve Request</button></a>
+                        <%}if(!(chatList[i].status==='Declined')){%>
+                            <a href=<%=l2%>><button type="button">Decline Request</button></a>
+                        <%}%>
+                        <%let l = 'replyStaff?id='+chatList[i].id%>
+                        <li><a href=<%=l%>><button type="button">Messages</button></a></li><br><br>
+                    </ul> 
+                </li>
+            <%}%>
+        </ol>
+    </div>
+    
+
+</body>
+</html>

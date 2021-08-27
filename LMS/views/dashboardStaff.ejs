@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Admin Dashboard</title>
+<link rel="stylesheet" href="/Styles/dashboardStaff.css">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--<a href='/home'>Home</a><br>-->
+    <div class="navi">   
+         <a class="logout" href='/logoutStaff'>logout</a><br>
+    </div>
+    <h1>Dashboard</h1>
+    <h2>Welcome <%=username%></h2>
+    <%let l = 'chatStaff?username='+username %>
+
+    <a href=<%=l%> class="buttname">
+        <button type="button">Show Student Requests</button>
+    </a>
+
+
+</body>
+</html>

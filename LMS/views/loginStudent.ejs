@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Student login</title>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/Styles/login-student.css">
+
+
+</head>
+<body>
+    <a href="home">Back</a><br>
+    <div class="content">
+        <h1>Log In Student</h1>
+        <form action="/loginStudent" method="POST">
+            
+            <form action="/loginStudent" method="POST" name="form" id="formLStudent">
+                <table>
+                    <tr>
+                        <td>Username</td>
+                        <td><input type="text" name="username" id="username" placeholder="eg: nima"></td>
+                    </tr>
+                    <tr>
+                        <td>Password</td>
+                        <td><input type="password" name="password" id="password" placeholder="********"></td>
+                    </tr>
+                    <tr>
+                        <td><button type="submit" value="Submit" name="submit">Log In</button></td>
+                    </tr>
+                </table>
+        </form>
+        <a href="signupStudent">Don't have account? <strong>SignUp Now</strong></a><br>
+        <% if(!(message===""))  {%>
+            <div>
+                <ul>
+                    <li>
+                        <%=message%>
+                    </li>
+                </ul>
+            </div>
+            <%}%>
+    </div>
+</body>
+</html>

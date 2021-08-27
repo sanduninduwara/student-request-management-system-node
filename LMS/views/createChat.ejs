@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>create chat</title>
+<link rel="stylesheet" href="/Styles/createChat.css">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--<a href='/home'>Home</a><br>-->
+    <%let l1 = '/dashboardStudent?username='+username %>
+    <%let l2 = '/chatStudent?username='+username %>
+    <div class="navi">
+    <a href=<%=l1%>>Dashboard</a><br>
+    <a href=<%=l2%>>My Resquest</a><br>
+    </div>
+    <div class="content">
+    <h1>New Request</h1>
+    <ul>
+        <li>
+            Student Username : <%=username%>
+        </li>
+            <%let l = '/createChat?username='+username %>
+            <form action = <%=l%> method="POST">
+                <input type="text" placeholder="Your name(Full Name)" name="studentname">
+                <input type="text" placeholder="Index Number" name="studentid">
+                <select name="type">
+                    <option value="Late Requests">Late Requests</option>
+                    <option value="Assignment Submission">Assignment Submission</option>
+                    <option value="Repeat Exams">Repeat Exams</option>
+                    <option value="Other">Other</option>
+                </select>
+                <input type="text" placeholder="Staff Username" name="staffusername">
+                <input type="text" placeholder="Subject" name="subject">
+                <!--<input type=text  placeholder="Content" name="content" class="textarea">-->
+    
+                <textarea name="content" type=text cols="35" rows="15" placeholder="content"></textarea>
+                <button type="submit">submit</button>
+            </form>
+    </ul>
+    </div>
+</body>
+</html>

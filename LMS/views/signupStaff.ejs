@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/Styles/signupStaff.css">
+
+    <title>Admin sign up</title>
+</head>
+<body>
+    <a href="home">Back</a><br>
+    <div class="content">
+        <h1>SignUp </h1>
+        <form action="/signupStaff" method="POST" name="formSStaff" id="formSStaff">
+        <table>
+            <tr>
+                <td>FirstName</td>
+                <td><input type="text" name="firstname" id="firstname"></td>
+            </tr>
+            <tr>
+                <td>LastName</td>
+                <td><input type="text" name="lastname" id="lastname"></td>
+            </tr>
+            <tr>
+                <td>AdminID</td>
+                <td><input type="text" name="id" id="id"></td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td><input type="text" name="email" id="email"></td>
+            </tr>
+            <tr>
+                <td>Username</td>
+                <td><input type="text" name="username" id="username"></td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td><input type="password" name="password" id="password" placeholder="******"></td>
+            </tr>
+            <tr>
+                <td>Confirm Password</td>
+                <td><input type="password" name="password2" id="password2" placeholder="******"></td>
+            </tr>
+
+            <tr>
+                <td>Admin Code</td>
+                <td><input type="password" name="code" id="code" placeholder="1"></td>
+            </tr>
+            <tr>
+                <td><button type="submit" value="Submit" name="submit">Create Account</button></td>
+            </tr>
+        </table>
+        
+    </form>
+    <% if(!(message===""))  {%>
+        <div>
+            <ul>
+                <li>
+                    <%=message%>
+                </li>
+            </ul>
+        </div>
+        <%}%>    
+    </div>
+    
+</body>
+</html>

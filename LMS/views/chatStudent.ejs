@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="/Styles/chatStudent.css">
+<title>chats</title>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--<a href='/home'>Home</a><br>-->
+    <%let l1 = '/dashboardStudent?username='+username %>
+    <%let l2 = '/createChat?username='+username %>
+
+    <div class="navi">
+    <a href=<%=l1%>>Home</a><br>
+    <a href=<%=l2%>>New Resquest</a><br>
+
+    </div>
+    <h1>My Requests</h1>
+    <ul>
+        <li>
+            Name : <%=username%>
+        </li>
+    </ul>
+    <ol>
+        <%for(let i=chatList.length-1;i>=0;i--){%>
+            <li class="msg-list">
+                <ul class="msg">
+                    <li>To     :<%=chatList[i].staff%></li>
+                    <li>Type   : <%=chatList[i].type%></li>
+                    <li>Subject:<%=chatList[i].subject%></li>
+                    <li>Status :<%=chatList[i].status%></li>
+                    <%let l = 'replyStudent?id='+chatList[i].id%>
+                    <li><a href=<%=l%>>Messages</a></li>
+                </ul> 
+            </li>
+        <%}%>
+    </ol>
+
+</body>
+</html>

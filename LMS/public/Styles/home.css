@@ -1,0 +1,58 @@
+:root{
+    color: blue;
+}
+body{
+    background-image: url("background-site.jpg");
+    /* background: rgb(119, 219, 203); */
+    text-align: center;
+    font: 13px/20px "Lucida Grande", Tahoma, Verdana, sans-serif;
+    /* position:fixed; */
+    bottom: 300px;
+    left: 700px;
+}
+h1{
+    color:#899fb8;
+    text-shadow: 4px 3px 4px  #09115c;
+    position:relative;
+    font-size: 270%;
+    top: 50px;
+    bottom: 20px;
+}
+
+.student-sign
+{
+    color:rgb(250, 251, 255);
+    background: rgb(39, 38, 129);
+    box-shadow: 10px 8px 15px rgba(14, 12, 12, 0.4); 
+    width: 150%;
+    padding: 16px;
+    border-radius: 20px;
+    font-size: 20px;
+    margin: 15px 0;
+    position: relative;
+    top: 150px;
+    border: none;
+    outline: black;
+    cursor: pointer;
+    text-decoration: none;
+ 
+    
+}
+
+.admin-sign
+{
+    color:rgb(250, 251, 255);
+    background: rgb(14, 30, 122);
+    box-shadow: 10px 8px 15px rgba(14, 12, 12, 0.4); 
+    width: 100%;
+    padding: 17px;
+    border-radius: 20px;
+    font-size: 20px;
+    margin: 10px 0;
+    position: relative;
+    top: 180px;
+    border: none;
+    outline: black;
+    cursor: pointer;
+    text-decoration: none;
+}

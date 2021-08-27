@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="stylesheet" href="/Styles/replyStudent.css">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chat reply</title>
+</head>
+<body>
+    <%let student = chat.student%>
+    <%let l1 = '/dashboardStudent?username='+student %>
+    <%let l2 = '/chatStudent?username='+student %>
+    <div class="navi">
+        <a href=<%=l1%>>Home</a><br>
+        <a href=<%=l2%>>My Requests</a><br>    
+    </div>
+    <div class="con">
+        <h1>View Requests</h1>
+    <%let staff = chat.staff%>
+    <%let id = chat.id%>
+    <%let name = chat.studentName%>
+    <%let studentID = chat.studentID%>
+    <%let subject = chat.subject%>
+    <%let type = chat.type%>
+    <%let status = chat.status%>
+    <%let content = chat.content%>
+    <%let l = 'replyStudent?id='+id%>
+    <ul>
+        <li>Student: <%=student%></li>
+        <li>Name: <%=name%></li>
+        <li>Index Number: <%=studentID%></li>
+        <li>Type: <%=type%></li>
+        <li>Subject: <%=subject%></li>
+        <li>Status: <%=status%></li>
+        <li>Staff Member : <%=staff%></li>
+    </ul>
+    <ol>
+        <%let pre;%>
+        <%for(let i=1;i<content.length;i=i+2){%>
+            <%if(content[i]==="Student"){%>
+                <li class="student-msg"><%="You : "+content[i+1]%></li>
+            <%}else{%>
+                <li class="staff-msg" ><%=staff+" : "+content[i+1]%></li>
+            <%}%>
+        <%}%>
+        
+    </ol>
+    <form class="form-text" action=<%=l%> method="POST">
+        <textarea class="textbox" type="text" placeholder="Message" name="replyData" cols="50" rows="15"></textarea><br>
+        <button type="submit">Sent</button>
+    </form>
+    </div>
+    
+</body>
+</html>

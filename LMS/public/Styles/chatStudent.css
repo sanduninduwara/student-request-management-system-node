@@ -1,0 +1,41 @@
+body{
+    background-image: url("background-site.jpg");
+}
+.navi{
+    display: flex;
+    flex-wrap: wrap;
+    font-size: large;
+    width: 100%;
+    height: 40px;
+    background-color: #7b89a6;
+    ;
+}
+h1{
+    padding-left: 3%;
+}
+a{
+    text-decoration: none;
+    padding: 10px;
+    transition-duration: 0.4s;
+}
+a:hover{
+    font-size: 110%;
+    color: green;
+}
+.msg-list{
+    padding-left: 3%;
+}
+.msg{
+
+    width: 45%;
+    background-color: rgb(137, 158, 219);
+    border-radius: 5px;
+    padding: 7px;
+}
+
+li{
+    margin: 10px;
+}
+.msg:hover{
+    background-color: rgb(112, 127, 175);
+}

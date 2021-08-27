@@ -1,0 +1,49 @@
+body{
+    background-image: url("background-site.jpg");
+}
+.navi{
+    width:100%;
+    background-color: rgb(65, 102, 145);
+    padding: 10px;
+    padding-left: 90%;
+    height: fit-content;
+}
+.logout{
+    text-decoration: none;
+    font-size: 105%;
+    color: rgb(207, 191, 191);
+    font-size: large;
+    transition-duration: 0.2s;
+}
+.logout:hover {
+    color: red;
+    font-size: 130%;
+}
+h1{
+    padding-left: 20px;
+}
+h2 {
+    padding-left: 20px;
+}
+.buttname{
+    padding-left: 27%;
+    justify-self: center;
+    align-self: center;
+}
+button
+{
+    color:rgb(250, 251, 255);
+    background: blue;
+    width: 50%;
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 15px;
+    margin: 10px 0;
+    border: none;
+    outline: black;
+    cursor: pointer;
+    text-align: center;
+    justify-self: center;
+    box-shadow: 10px 8px 15px rgba(14, 12, 12, 0.4); 
+
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="/Styles/replyStaff.css">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Private reply</title>
+</head>
+<body>
+    <%let staff = chat.staff%>
+    <%let ll1 = '/dashboardStaff?username='+staff %>
+    <%let ll2 = '/chatStaff?username='+staff %>
+    <div class="navi">
+        <a class="dash" href=<%=ll1%>>DashBoard</a><br>
+        <a class="req" href=<%=ll2%>>View Requests</a>
+    </div>
+    <div class="details">
+        <h1>View Request</h1>
+        <%let student = chat.student%>
+        <%let id = chat.id%>
+        <%let name = chat.studentName%>
+        <%let studentID = chat.studentID%>
+        <%let subject = chat.subject%>
+        <%let type = chat.type%>
+        <%let status = chat.status%>
+        <%let content = chat.content%>
+        <%let l = 'replyStaff?id='+id%>
+        <ul>
+            <li>Admin               : <%=staff%></li>
+            <li>Student Username    : <%=student%></li>
+            <li>Student Name        : <%=name%></li>
+            <li>Student Index Number     : <%=studentID%></li>
+            <li>Resquest Type                : <%=type%></li>
+            <li>Subject             : <%=subject%></li>
+            <li>Status              : <%=status%></li>
+        </ul>
+    </div>
+    
+    <%let l1 = 'replyStaff?id='+id+'&stat=approve' %>
+    <%let l2 = 'replyStaff?id='+id+'&stat=decline' %>
+    <div class="control-button">
+        <%if(!(status==='Approved')){%>
+            <a href=<%=l1%>><button type="button">Approve Request</button></a>
+        <%}if(!(status==='Declined')){%>
+            <a href=<%=l2%>><button type="button">Decline Request</button></a>
+        <%}%>
+    </div>
+    
+    
+    
+    <ol>
+        <%let pre;%>
+        <%for(let i=1;i<content.length;i=i+2){%>
+            <%if(content[i]==="Staff"){%>
+                <li class="staff-msg"><%="You   : "+content[i+1]%></li>
+            <%}else{%>
+                <%pre = student+" : "%>
+                <li class="student-msg"><%=student+"    : "+content[i+1]%></li>
+            <%}%>
+        <%}%>
+        
+    </ol>
+    <form action=<%=l%> method="POST">
+        <!--<input type="text" placeholder="reply" name="replyData" aria-rowspan="15" aria-colspan="50" aria-rowcount="15" aria-colcount="50">-->
+        <textarea class="textbox" type="text" name="replyData" cols="50" rows="10" placeholder="reply"></textarea><br>
+        <button type="submit">Send reply</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,105 @@
+body {
+    background-image: url("background-site.jpg"); 
+}
+.navi{
+    display: flex;
+    flex-wrap: wrap;
+    font-size: large;
+    width: 100%;
+
+    padding: 10px;
+    background-color: #7b89a6;
+}
+.dash {
+    text-decoration: none;
+    transition-duration: 0.3s;
+    padding-right: 15px;
+}
+.dash:hover{
+font-size: 105%;
+color: green;
+}
+.req {
+    text-decoration: none;
+    transition-duration: 0.3s;
+}
+.req:hover{
+    font-size: 105%;
+    color: green;
+}
+.details{
+    padding-left: 4%;
+}
+
+button {
+    color:rgb(250, 251, 255);
+    background: blue;
+    width: 20%;
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 15px;
+    margin: 10px 0;
+    border: none;
+    outline: black;
+    cursor: pointer;
+    text-align: center;
+    transition-duration: 0.3s;
+}
+button:hover{
+    background-color: rgb(241, 106, 79);
+}
+input{ 
+    font-size: 120%; 
+    color: #5a5854; 
+    background-color: #f2f2f2; 
+    border: 1px solid #bdbdbd; 
+    border-radius: 5px; 
+    padding: 5px 5px 5px 30px; 
+    background-repeat: no-repeat; 
+    background-position: 8px 9px; 
+    display: block; 
+    margin-bottom: 10px;}
+
+ol{
+    color: black;
+    border-radius: 10px;
+}
+
+.staff-msg
+{
+    color:rgb(196, 199, 212);
+    background: rgb(207, 96, 5);
+    width: 50%;
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 15px;
+    margin: 15px 0;
+    border: none;
+    outline: black;
+    cursor: pointer;
+    text-align: left;
+}
+
+.student-msg{
+    color:rgb(214, 214, 216);
+    background: rgb(48, 101, 76);
+    width: 50%;
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 15px;
+    margin: 15px 0;
+    border: none;
+    outline: black;
+    cursor: pointer;
+    text-align:left;
+}
+.textbox{
+    padding: 5px;
+    width: 55%;
+}
+.submit {
+    box-shadow: 10px 8px 15px rgba(14, 12, 12, 0.4); 
+}
+.control-button {
+    padding-left: 5%;
+}

@@ -1,0 +1,50 @@
+body {
+    background-image: url("background-site.jpg");
+    
+}
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+button
+{
+    color:rgb(250, 251, 255);
+    background: blue;
+    width: 100%;
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 15px;
+    margin: 10px 0;
+    border: none;
+    outline: black;
+    cursor: pointer;
+    transition-duration: 0.3s;
+}
+button:hover {
+    background-color: rgb(221, 109, 94);
+}
+
+input{ 
+    font-size: 120%; 
+    color: #5a5854; 
+    background-color: #f2f2f2; 
+    border: 1px solid #bdbdbd; 
+    border-radius: 5px; 
+    padding: 5px 5px 5px 30px; 
+    background-repeat: no-repeat; 
+    background-position: 8px 9px; 
+    display: block; 
+    margin-bottom: 10px;}
+
+a {
+    
+    text-decoration: none;
+    transition-duration: 0.3s;
+    padding-left: 20px;
+}
+a:hover {
+        color: red;
+}
